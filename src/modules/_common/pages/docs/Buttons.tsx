@@ -1,6 +1,6 @@
 import { Box, Button, Divider, IconButton, Typography } from '@mui/material'
 import { Add, Close } from '@mui/icons-material'
-import { CSVIcon, DeleteIcon, PDFIcon, EditIcon } from '../../config/icons'
+import { CSVIcon, DeleteIcon, PDFIcon, EditIcon } from 'src/config/icons'
 
 const Buttons = () => {
     return (

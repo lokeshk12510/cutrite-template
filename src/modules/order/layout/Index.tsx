@@ -3,7 +3,7 @@ import Header from './header/Index'
 import Footer from './footer/Index'
 import { styled } from '@mui/material'
 
-const AuthenticatedLayout = () => {
+const OrderLayout = () => {
     return (
         <Root>
             <Header />
@@ -13,7 +13,7 @@ const AuthenticatedLayout = () => {
     )
 }
 
-export default AuthenticatedLayout
+export default OrderLayout
 
 const Root = styled('main')(({ theme }) => ({
     '& main': {

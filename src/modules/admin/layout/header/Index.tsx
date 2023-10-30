@@ -17,7 +17,7 @@ import { useState } from 'react'
 import { Logout, Settings } from '@mui/icons-material'
 import Images from 'src/config/images'
 import { Link } from 'react-router-dom'
-import urls from 'src/routes/urls'
+import adminUrls from '../../router/urls'
 
 const Header = () => {
     const [open, setOpen] = useState(false)
@@ -48,10 +48,10 @@ const Header = () => {
                             gap: 2,
                         }}
                     >
-                        <Button className="menuBtn" component={Link} to={urls.orders}>
+                        <Button className="menuBtn" component={Link} to={adminUrls.orders}>
                             Online orders
                         </Button>
-                        <Button className="menuBtn" component={Link} to={urls.users}>
+                        <Button className="menuBtn" component={Link} to={adminUrls.users}>
                             Users
                         </Button>
 
@@ -75,7 +75,7 @@ const Header = () => {
                                         <MenuList>
                                             <MenuItem
                                                 component={Link}
-                                                to={urls.maintenance.faceProfile}
+                                                to={adminUrls.maintenance.faceProfile}
                                                 onClick={handleClickAway}
                                             >
                                                 Face Profile

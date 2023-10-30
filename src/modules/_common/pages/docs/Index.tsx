@@ -5,8 +5,6 @@ import Buttons from './Buttons'
 import Typographies from './Typographies'
 import Datagrid from './Datagrid'
 import Dialogs from './Dialog'
-import Header from 'src/layout/authenticatedLayout/header/Index'
-import Footer from 'src/layout/authenticatedLayout/footer/Index'
 
 const Docs = () => {
     return (
@@ -19,12 +17,12 @@ const Docs = () => {
                 </Box>
                 <Paper sx={{ background: '#fff', height: '100%', p: 3, borderRadius: 2 }}>
                     <Stack spacing={3}>
-                        <Header />
+                        {/* <Header /> */}
                         <Typographies />
                         <Buttons />
                         <Datagrid />
                         <Dialogs />
-                        <Footer />
+                        {/* <Footer /> */}
                     </Stack>
                 </Paper>
             </Container>
