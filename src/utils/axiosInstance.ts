@@ -1,5 +1,7 @@
 import axios from 'axios'
+// Config
 import constants from '../config/constants'
+// Redux
 import { store } from '../app/store'
 
 // Set config defaults when creating the instance

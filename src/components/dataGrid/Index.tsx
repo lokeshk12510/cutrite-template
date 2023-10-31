@@ -1,4 +1,6 @@
+// Mui
 import { DataGrid, DataGridProps } from '@mui/x-data-grid'
+// Component
 import GridFooterRow from './GridFooterRow'
 
 const MuiDataGrid = (props: DataGridProps) => {

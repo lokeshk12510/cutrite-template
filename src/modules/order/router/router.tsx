@@ -1,14 +1,15 @@
+// Router
 import { RouteObject } from 'react-router-dom'
+// Urls
 import orderUrls from './urls'
-import OrderLogin from '../pages/auth/Index'
+// Layout
 import OrderLayout from '../layout/Index'
-import OrderPanel from '../pages/orders/Index'
+// Pages
+import OrderPanel from '../pages/form/Index'
+import Summary from '../pages/summary/Index'
+import Checkout from '../pages/checkout/Index'
 
 const orderRoutes: RouteObject[] = [
-    {
-        path: orderUrls.login,
-        element: <OrderLogin />,
-    },
     {
         path: orderUrls.root,
         element: <OrderLayout />,
@@ -17,6 +18,14 @@ const orderRoutes: RouteObject[] = [
                 path: orderUrls.root,
                 index: true,
                 element: <OrderPanel />,
+            },
+            {
+                path: orderUrls.summary,
+                element: <Summary />,
+            },
+            {
+                path: orderUrls.checkout,
+                element: <Checkout />,
             },
         ],
     },

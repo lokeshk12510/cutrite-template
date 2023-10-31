@@ -5,8 +5,10 @@ export default function MuiButton() {
                 root: {
                     minWidth: 100,
                     padding: '4px 10px',
-                    textTransform: 'Capitalize',
                     fontWeight: 400,
+                    '&.MuiButtonBase-root': {
+                        textTransform: 'capitalize',
+                    },
                 },
             },
         },

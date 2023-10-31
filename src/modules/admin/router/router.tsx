@@ -1,15 +1,19 @@
+// Router
+import { RouteObject } from 'react-router-dom'
+// Layout
 import AdminLayout from 'src/modules/admin/layout/Index'
+// Urls
 import adminUrls from './urls'
+// Pages
+import Login from '../pages/auth/Login'
 import Orders from '../pages/orders'
 import Users from '../pages/users/Index'
 import FaceProfile from '../pages/maintenance/faceProfile/Index'
-import { RouteObject } from 'react-router-dom'
-import AdminLogin from '../pages/auth/Index'
 
 const adminRouter: RouteObject[] = [
     {
         path: adminUrls.login,
-        element: <AdminLogin />,
+        element: <Login />,
     },
     {
         path: adminUrls.root,

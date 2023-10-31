@@ -1,6 +1,9 @@
+// Mui
 import { IconButton } from '@mui/material'
+// Components
 import GridWrapper from 'src/components/GridWrapper'
 import MuiDataGrid from 'src/components/dataGrid/Index'
+// Config
 import { CSVIcon } from 'src/config/icons'
 
 function Orders() {

@@ -1,5 +1,7 @@
-import { Add } from '@mui/icons-material'
+// Mui
 import { Button } from '@mui/material'
+import { Add } from '@mui/icons-material'
+// Components
 import GridWrapper from 'src/components/GridWrapper'
 import MuiDataGrid from 'src/components/dataGrid/Index'
 

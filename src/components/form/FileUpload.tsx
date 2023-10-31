@@ -1,5 +1,7 @@
+// Mui
 import { Box, Button, FormHelperText, Typography, alpha, styled } from '@mui/material'
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate'
+// Utils
 import { isValidImg } from 'src/utils/helper'
 
 interface FileUploadProps {

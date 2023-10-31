@@ -4,10 +4,13 @@ import { setupListeners } from '@reduxjs/toolkit/query'
 // redux-persist
 import { persistReducer, persistStore } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
+// Slices
 import authSlice from './slices/authSlice'
+import snackbarSlice from './slices/snackbarSlice'
 
 const reducers = combineReducers({
     auth: authSlice,
+    snackbar: snackbarSlice,
 })
 
 const persistConfig = {

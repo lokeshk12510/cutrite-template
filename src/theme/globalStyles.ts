@@ -49,6 +49,9 @@ const GlobalStyles = () => {
             display: 'block',
             maxWidth: '100%',
         },
+        a: {
+            cursor: 'pointer',
+        },
         div: {
             '&.page-holder': {
                 display: 'grid',

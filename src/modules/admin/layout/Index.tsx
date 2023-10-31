@@ -1,15 +1,21 @@
+// Mui
+import { styled } from '@mui/material'
+// Router
 import { Outlet } from 'react-router-dom'
+// Components
 import Header from './header/Index'
 import Footer from './footer/Index'
-import { styled } from '@mui/material'
+import AdminAuthenticator from './AdminAuthenticator'
 
 const AdminLayout = () => {
     return (
-        <Root>
-            <Header />
-            <main>{<Outlet />}</main>
-            <Footer />
-        </Root>
+        <AdminAuthenticator>
+            <Root>
+                <Header />
+                <main>{<Outlet />}</main>
+                <Footer />
+            </Root>
+        </AdminAuthenticator>
     )
 }
 

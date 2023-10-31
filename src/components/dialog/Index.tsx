@@ -1,4 +1,4 @@
-import { Close } from '@mui/icons-material'
+// Mui
 import {
     Button,
     ButtonProps,
@@ -11,6 +11,7 @@ import {
     Paper,
     styled,
 } from '@mui/material'
+import { Close } from '@mui/icons-material'
 
 export interface IActionBtn extends ButtonProps {
     label: string

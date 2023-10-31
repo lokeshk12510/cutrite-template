@@ -1,3 +1,5 @@
+import { useState } from 'react'
+// Mui
 import {
     AppBar,
     Avatar,
@@ -13,11 +15,17 @@ import {
     ListItemIcon,
 } from '@mui/material'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
-import { useState } from 'react'
 import { Logout, Settings } from '@mui/icons-material'
+// Config
 import Images from 'src/config/images'
-import { Link } from 'react-router-dom'
+// Router
+import { Link, useNavigate } from 'react-router-dom'
+// Urls
 import adminUrls from '../../router/urls'
+// Redux
+import { useDispatch } from 'react-redux'
+import { authLogout } from 'src/app/slices/authSlice'
+import { showSnackbar } from 'src/app/slices/snackbarSlice'
 
 const Header = () => {
     const [open, setOpen] = useState(false)
@@ -33,7 +41,9 @@ const Header = () => {
         <AppBar position="sticky">
             <Container maxWidth={false}>
                 <Toolbar disableGutters>
-                    <img src={Images.Logo} alt="logo" width={100} height={50} style={{ width: 100, height: 50 }} />
+                    <Link to="/">
+                        <img src={Images.Logo} alt="logo" width={100} height={50} style={{ width: 100, height: 50 }} />
+                    </Link>
                     <Box
                         sx={{
                             flexGrow: 1,
@@ -116,6 +126,9 @@ export default Header
 const Profile = () => {
     const [open, setOpen] = useState(false)
 
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
     const handleClick = () => {
         setOpen((prev) => !prev)
     }
@@ -123,6 +136,14 @@ const Profile = () => {
     const handleClickAway = () => {
         setOpen(false)
     }
+
+    const handleLogout = () => {
+        dispatch(authLogout())
+        navigate(adminUrls.login)
+
+        dispatch(showSnackbar({ title: 'Logged Out successfully!', type: 'success' }))
+    }
+
     return (
         <ClickAwayListener onClickAway={handleClickAway}>
             <Box sx={{ position: 'relative' }}>
@@ -157,7 +178,7 @@ const Profile = () => {
                                 </ListItemIcon>
                                 Settings
                             </MenuItem>
-                            <MenuItem onClick={handleClickAway}>
+                            <MenuItem onClick={handleLogout}>
                                 <ListItemIcon>
                                     <Logout fontSize="small" />
                                 </ListItemIcon>

@@ -1,7 +1,7 @@
 const orderUrls = {
     root: '/',
-    login: '/login',
-    orders: '/order',
+    summary: '/summary',
+    checkout: '/checkout',
 }
 
 export default orderUrls

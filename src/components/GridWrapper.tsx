@@ -1,5 +1,6 @@
-import { Search } from '@mui/icons-material'
+// Mui
 import { OutlinedInput, Paper, Typography, styled } from '@mui/material'
+import { Search } from '@mui/icons-material'
 
 interface GridWrapperProps {
     title: string

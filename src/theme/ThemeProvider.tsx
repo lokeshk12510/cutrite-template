@@ -1,9 +1,13 @@
 import { ReactNode } from 'react'
-import themeOptions from './themeOptions'
-import { Settings } from './types'
-import GlobalStyling from './globalStyles'
+// MUI
 import { CssBaseline, GlobalStyles, StyledEngineProvider, createTheme, responsiveFontSizes } from '@mui/material'
 import { ThemeProvider } from '@emotion/react'
+// Options
+import themeOptions from './themeOptions'
+import GlobalStyling from './globalStyles'
+// Types
+import { Settings } from './types'
+// Components
 import componentsOverrides from './overrides/Index'
 
 interface ThemeProps {

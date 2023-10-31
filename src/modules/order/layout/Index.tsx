@@ -1,14 +1,22 @@
+// Mui
+import { styled } from '@mui/material'
+// Router
 import { Outlet } from 'react-router-dom'
+// Components
 import Header from './header/Index'
 import Footer from './footer/Index'
-import { styled } from '@mui/material'
+import OrderAuthenticator from './OrderAuthenticator'
 
 const OrderLayout = () => {
     return (
         <Root>
-            <Header />
-            <main>{<Outlet />}</main>
-            <Footer />
+            <OrderAuthenticator>
+                <>
+                    <Header />
+                    <main>{<Outlet />}</main>
+                    <Footer />
+                </>
+            </OrderAuthenticator>
         </Root>
     )
 }

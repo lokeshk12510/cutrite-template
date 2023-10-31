@@ -7,3 +7,11 @@ export const isValidImg = (type: string) => {
     }
     return false
 }
+
+export function fakePromise<T>(data: T): Promise<T> {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(data)
+        }, 1000) // 1000 milliseconds (1 seconds)
+    })
+}

@@ -1,3 +1,4 @@
+// Components
 import GridWrapper from 'src/components/GridWrapper'
 import MuiDataGrid from 'src/components/dataGrid/Index'
 
