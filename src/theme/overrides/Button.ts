@@ -1,4 +1,6 @@
-export default function MuiButton() {
+import { Theme } from '@mui/material'
+
+export default function MuiButton(theme: Theme) {
     return {
         MuiButton: {
             styleOverrides: {
@@ -6,9 +8,9 @@ export default function MuiButton() {
                     minWidth: 100,
                     padding: '4px 10px',
                     fontWeight: 400,
-                    '&.MuiButtonBase-root': {
-                        textTransform: 'capitalize',
-                    },
+                },
+                contained: {
+                    border: `1px solid ${theme.palette.primary.main}`,
                 },
             },
         },
@@ -16,6 +18,14 @@ export default function MuiButton() {
             styleOverrides: {
                 root: {
                     padding: '4px',
+                },
+            },
+        },
+        MuiPaginationItem: {
+            styleOverrides: {
+                root: {
+                    minWidth: 20,
+                    height: 20,
                 },
             },
         },

@@ -32,7 +32,7 @@ const MuiDialog = (props: IDialogProps) => {
     }
 
     return (
-        <Root onClose={handleClose} {...rest}>
+        <Root maxWidth="xs" onClose={handleClose} {...rest}>
             <DialogTitle>
                 {title}
                 <IconButton onClick={handleClose}>
@@ -61,20 +61,20 @@ export default MuiDialog
 
 const Root = styled(Dialog)(({ theme }) => ({
     '& .MuiDialogTitle-root': {
-        padding: '5px 15px',
-        paddingBottom: theme.spacing(1.5),
+        padding: '3px 10px',
         background: theme.palette.grey[200],
         borderBottom: `1px solid ${theme.palette.grey[300]}`,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
+        ...theme.typography.subtitle2,
     },
     '& .MuiDialogContent-root': {
-        padding: '13px 15px',
+        padding: '10px!important',
 
         background: theme.palette.grey[100],
         '& .content': {
-            padding: theme.spacing(2),
+            padding: theme.spacing(1.5),
         },
     },
     '& .MuiDialogActions-root': {

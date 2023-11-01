@@ -19,12 +19,17 @@ export default function MuiDatagrid(theme: Theme) {
                     display: 'none',
                 },
                 columnHeaders: {
-                    minHeight: '40px!important',
-                    maxHeight: '40px!important',
+                    minHeight: '30px!important',
+                    maxHeight: '30px!important',
+                    lineHeight: '30px!important',
                     backgroundColor: theme.palette.secondary.main,
+                },
+                columnHeader: {
+                    height: '30px!important',
                 },
                 columnHeaderTitle: {
                     color: theme.palette.secondary.contrastText,
+                    fontWeight: 500,
                     '&:first-of-type': {
                         borderTopLeftRadius: theme.spacing(0.7),
                         borderBottomLeftRadius: theme.spacing(0.7),

@@ -1,5 +1,6 @@
-import palette from './palette'
 import { Settings } from './types'
+import palette from './palette'
+import typography from './typography'
 
 export type ThemeColor = 'primary' | 'secondary' | 'error' | 'warning' | 'info' | 'success' | 'black' | 'white'
 
@@ -10,9 +11,7 @@ const themeOptions = (settings: Settings) => {
 
     const themeConfig = {
         palette: palette(mode),
-        typography: {
-            fontFamily: ['Poppins', 'sans-serif'].join(','),
-        },
+        typography,
         shape: {
             borderRadius: 0,
         },

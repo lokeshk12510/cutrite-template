@@ -4,5 +4,5 @@ import MuiForm from './Form'
 import MuiDatagrid from './Datagrid'
 
 export default function componentsOverrides(theme: Theme) {
-    return Object.assign(MuiButton(), MuiForm(theme), MuiDatagrid(theme))
+    return Object.assign(MuiButton(theme), MuiForm(theme), MuiDatagrid(theme))
 }

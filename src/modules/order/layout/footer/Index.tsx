@@ -30,7 +30,4 @@ const Root = styled('footer')(({ theme }) => ({
     justifyContent: 'space-between',
     background: theme.palette.secondary.main,
     color: theme.palette.secondary.contrastText,
-    '& .MuiTypography-root': {
-        fontSize: '.8rem',
-    },
 }))

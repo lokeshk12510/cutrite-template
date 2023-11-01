@@ -23,8 +23,8 @@ export default AdminLayout
 
 const Root = styled('main')(({ theme }) => ({
     '& main': {
-        minHeight: 'calc(100vh - 93px)',
-        padding: theme.spacing(1),
+        minHeight: 'calc(100vh - 90px)',
+        padding: theme.spacing(0.875),
     },
     background: theme.palette.background.default,
 }))

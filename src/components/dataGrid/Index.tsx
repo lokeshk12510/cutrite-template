@@ -8,7 +8,7 @@ const MuiDataGrid = (props: DataGridProps) => {
         <DataGrid
             pagination
             disableColumnMenu
-            rowHeight={40}
+            rowHeight={30}
             autoHeight
             {...props}
             slots={{

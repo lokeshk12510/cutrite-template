@@ -12,7 +12,7 @@ export default function MuiForm(theme: Theme) {
             styleOverrides: {
                 root: {
                     '& input': {
-                        padding: '4px 10px 5px',
+                        padding: '2px 6px 2px',
                         minHeight: 21,
                     },
                 },
@@ -24,6 +24,8 @@ export default function MuiForm(theme: Theme) {
                     marginLeft: 0,
                     marginRight: 0,
                     marginTop: 0,
+                    marginBottom: 3,
+                    fontSize: '0.6rem',
                 },
             },
         },
@@ -49,11 +51,19 @@ export default function MuiForm(theme: Theme) {
                     '& .MuiOutlinedInput-root': {
                         padding: 0,
                         '& .MuiAutocomplete-input': {
-                            padding: '4px 10px 5px',
+                            padding: '2px 6px 2px',
                         },
                     },
                     '& .MuiAutocomplete-listbox': {
                         backgroundColor: '#ccc',
+                    },
+                },
+                endAdornment: {
+                    top: 'calc(50% - 12px)',
+                },
+                popupIndicator: {
+                    '& svg': {
+                        fontSize: '1.2rem',
                     },
                 },
             },
@@ -80,7 +90,7 @@ export default function MuiForm(theme: Theme) {
                         borderRadius: 0,
                         backgroundColor: theme.palette.primary.main,
                         color: theme.palette.primary.contrastText,
-                        height: '26px',
+                        height: '25px',
                         '& .MuiChip-label': {
                             paddingLeft: 6,
                             paddingRight: 12,
@@ -97,6 +107,13 @@ export default function MuiForm(theme: Theme) {
             styleOverrides: {
                 root: {
                     padding: 6,
+                },
+            },
+        },
+        MuiSvgIcon: {
+            styleOverrides: {
+                root: {
+                    fontSize: '1rem',
                 },
             },
         },
