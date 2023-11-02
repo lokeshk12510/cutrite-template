@@ -10,6 +10,8 @@ import { useDispatch } from 'react-redux'
 // Redux
 import { IAuthState, storeToken } from 'src/app/slices/authSlice'
 import { showSnackbar } from 'src/app/slices/snackbarSlice'
+// Components
+import Loader from 'src/components/Loader'
 
 interface IProctedLayoutProps {
     children: React.ReactElement
@@ -38,7 +40,7 @@ const OrderAuthenticator = (props: IProctedLayoutProps) => {
     }, [dispatch, isSuccess, data])
 
     if (isPending) {
-        return <div className="page-holder">loading...</div>
+        return <Loader />
     }
 
     if (isError) {

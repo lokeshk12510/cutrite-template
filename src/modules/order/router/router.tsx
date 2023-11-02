@@ -5,7 +5,7 @@ import orderUrls from './urls'
 // Layout
 import OrderLayout from '../layout/Index'
 // Pages
-import OrderPanel from '../pages/form/Index'
+import OrderForm from '../pages/orderForm/Index'
 import Summary from '../pages/summary/Index'
 import Checkout from '../pages/checkout/Index'
 
@@ -17,7 +17,7 @@ const orderRoutes: RouteObject[] = [
             {
                 path: orderUrls.root,
                 index: true,
-                element: <OrderPanel />,
+                element: <OrderForm />,
             },
             {
                 path: orderUrls.summary,

@@ -72,6 +72,8 @@ const Login = () => {
                         fullWidth
                         onChange={handleChange}
                         value={formData.emailId}
+                        size="large"
+                        helperText={' '}
                     />
                 </div>
                 <div className="inputField">
@@ -83,6 +85,8 @@ const Login = () => {
                         type="password"
                         onChange={handleChange}
                         value={formData.password}
+                        size="large"
+                        helperText={' '}
                     />
                 </div>
                 <Stack direction={'row'} alignItems="center" justifyContent="space-between" width={'100%'} my={1}>

@@ -3,21 +3,39 @@ import { Theme } from '@mui/material'
 
 export default function MuiForm(theme: Theme) {
     return {
-        MuiTextField: {
-            defaultProps: {
-                helperText: ' ',
-            },
-        },
-        MuiOutlinedInput: {
+        MuiInputBase: {
             styleOverrides: {
                 root: {
+                    backgroundColor: theme.palette.common.white,
                     '& input': {
                         padding: '2px 6px 2px',
                         minHeight: 21,
                     },
+                    '&.MuiInputBase-sizeLarge': {
+                        '& input': {
+                            padding: '2px 6px 2px',
+                            minHeight: 26,
+                        },
+                    },
+
+                    '&.Mui-focused': {
+                        outline: 'none',
+                        '& fieldset.MuiOutlinedInput-notchedOutline': {
+                            borderWidth: 1,
+                        },
+                    },
+                    '&.Mui-disabled': {
+                        background: theme.palette.action.disabledBackground,
+                    },
+                },
+                sizeSmall: {
+                    '& input': {
+                        padding: '1px 2px',
+                    },
                 },
             },
         },
+
         MuiFormHelperText: {
             styleOverrides: {
                 root: {
@@ -34,9 +52,6 @@ export default function MuiForm(theme: Theme) {
                 root: {
                     color: theme.palette.text.primary,
                     fontWeight: '500',
-                    '&.gridLabel': {
-                        top: 4,
-                    },
                 },
             },
         },
@@ -48,12 +63,19 @@ export default function MuiForm(theme: Theme) {
             },
             styleOverrides: {
                 root: {
+                    '& .MuiInputBase-root.MuiInputBase-sizeLarge': {
+                        '& input': {
+                            padding: '2px 6px 2px',
+                            minHeight: 26,
+                        },
+                    },
                     '& .MuiOutlinedInput-root': {
                         padding: 0,
                         '& .MuiAutocomplete-input': {
                             padding: '2px 6px 2px',
                         },
                     },
+
                     '& .MuiAutocomplete-listbox': {
                         backgroundColor: '#ccc',
                     },
@@ -114,6 +136,14 @@ export default function MuiForm(theme: Theme) {
             styleOverrides: {
                 root: {
                     fontSize: '1rem',
+                },
+            },
+        },
+        MuiMenu: {
+            styleOverrides: {
+                list: {
+                    paddingTop: 0,
+                    paddingBottom: 0,
                 },
             },
         },

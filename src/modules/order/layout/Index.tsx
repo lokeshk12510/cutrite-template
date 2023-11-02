@@ -4,8 +4,8 @@ import { styled } from '@mui/material'
 import { Outlet } from 'react-router-dom'
 // Components
 import Header from './header/Index'
-import Footer from './footer/Index'
 import OrderAuthenticator from './OrderAuthenticator'
+import Navbar from './header/Navbar'
 
 const OrderLayout = () => {
     return (
@@ -13,8 +13,8 @@ const OrderLayout = () => {
             <OrderAuthenticator>
                 <>
                     <Header />
-                    <main>{<Outlet />}</main>
-                    <Footer />
+                    <Navbar />
+                    <main style={{ maxWidth: '1920px', margin: 'auto' }}>{<Outlet />}</main>
                 </>
             </OrderAuthenticator>
         </Root>
@@ -24,9 +24,6 @@ const OrderLayout = () => {
 export default OrderLayout
 
 const Root = styled('main')(({ theme }) => ({
-    '& main': {
-        minHeight: 'calc(100vh - 90px)',
-        padding: theme.spacing(0.875),
-    },
     background: theme.palette.background.default,
+    minWidth: 1280,
 }))

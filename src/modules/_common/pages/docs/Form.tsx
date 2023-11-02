@@ -19,25 +19,31 @@ const Form = () => {
                 <FormLabel className="gridLabel">Last Name</FormLabel>
             </Grid>
             <Grid item xs={9}>
-                <TextField fullWidth placeholder="Enter Last Name" />
+                <TextField fullWidth placeholder="Enter Last Name" helperText={' '} />
             </Grid>
             <Grid item xs={3}>
                 <FormLabel className="gridLabel">Role</FormLabel>
             </Grid>
             <Grid item xs={9}>
-                <MuiAutocomplete disablePortal multiple options={top100Films} placeholder={'Select Role'} />
+                <MuiAutocomplete
+                    disablePortal
+                    multiple
+                    options={top100Films}
+                    placeholder={'Select Role'}
+                    helperText={' '}
+                />
             </Grid>
             <Grid item xs={3}>
                 <FormLabel className="gridLabel">Discount (%)</FormLabel>
             </Grid>
             <Grid item xs={9}>
-                <TextField placeholder="Enter Discount (%)" sx={{ maxWidth: 180 }} />
+                <TextField placeholder="Enter Discount (%)" sx={{ maxWidth: 180 }} helperText={' '} />
             </Grid>
             <Grid item xs={3}>
                 <FormLabel className="gridLabel">Status</FormLabel>
             </Grid>
             <Grid item xs={9}>
-                <MuiRadioGroup radioList={radioList} row />
+                <MuiRadioGroup radioList={radioList} row helperText=" " />
             </Grid>
             <Grid item xs={12}>
                 <FileUpload
@@ -46,6 +52,7 @@ const Form = () => {
                         console.log(e)
                         setFile(e)
                     }}
+                    helperText=" "
                 />
             </Grid>
         </Grid>

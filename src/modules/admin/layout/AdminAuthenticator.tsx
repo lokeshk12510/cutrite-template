@@ -11,6 +11,8 @@ import { showSnackbar } from 'src/app/slices/snackbarSlice'
 import { getAuth, storeToken } from 'src/app/slices/authSlice'
 // Hooks
 import { useAuthPromise } from 'src/hooks/useAuth'
+// Components
+import Loader from 'src/components/Loader'
 
 interface IAdminAuthProps {
     children: React.ReactElement
@@ -45,7 +47,7 @@ const AdminAuthenticator = (props: IAdminAuthProps) => {
     }
 
     if (isPending) {
-        return <div className="page-holder">loading...</div>
+        return <Loader />
     }
 
     if (isError || !data.token || !auth?.token) {

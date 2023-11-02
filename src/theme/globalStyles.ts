@@ -10,6 +10,9 @@ const GlobalStyles = () => {
             height: 'auto',
             WebkitOverflowScrolling: 'touch',
         },
+        body: {
+            fontSize: '10px',
+        },
         '#root': {
             width: '100%',
             height: '100%',
@@ -58,6 +61,9 @@ const GlobalStyles = () => {
                 placeItems: 'center',
                 height: '70vh',
             },
+        },
+        '& .gridLabel': {
+            top: 4,
         },
     }
 }

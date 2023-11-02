@@ -29,3 +29,33 @@ declare module '@mui/material/IconButton' {
         neutral: true
     }
 }
+
+declare module '@mui/material/styles/createTypography' {
+    interface TypographyOptions {
+        body3?: TypographyStyle
+    }
+}
+
+declare module '@mui/material/Typography' {
+    interface TypographyPropsVariantOverrides {
+        body3: true
+        subtitle3: true
+    }
+}
+
+declare module '@mui/material/InputBase' {
+    interface InputBasePropsSizeOverrides {
+        large: true
+    }
+}
+
+declare module '@mui/material/Autocomplete' {
+    interface AutocompletePropsSizeOverrides {
+        large: true
+    }
+}
+declare module '@mui/material/TextField' {
+    interface TextFieldPropsSizeOverrides {
+        large: true
+    }
+}

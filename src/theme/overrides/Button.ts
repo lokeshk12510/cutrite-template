@@ -12,6 +12,14 @@ export default function MuiButton(theme: Theme) {
                 contained: {
                     border: `1px solid ${theme.palette.primary.main}`,
                 },
+                sizeSmall: {
+                    padding: '1px 3px',
+                    minWidth: 0,
+                    fontSize: 10,
+                },
+                iconSizeSmall: {
+                    marginRight: 1,
+                },
             },
         },
         MuiIconButton: {

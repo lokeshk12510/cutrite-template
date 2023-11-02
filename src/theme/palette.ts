@@ -7,7 +7,7 @@ const themeColors = {
     warning: '#F36F22',
     error: '#d80000',
     info: '#33C2FF',
-    black: '#223354',
+    black: '#000000',
     white: '#ffffff',
 }
 
@@ -98,7 +98,7 @@ const palette = (mode: PaletteMode) => {
             hover: `rgba(${mainColor}, 0.04)`,
             selected: `rgba(${mainColor}, 0.08)`,
             disabled: `rgba(${mainColor}, 0.3)`,
-            disabledBackground: `rgba(${mainColor}, 0.10)`,
+            disabledBackground: `rgba(${mainColor}, 0.01)`,
             focus: `rgba(${mainColor}, 0.12)`,
         },
     }
